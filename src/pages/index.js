@@ -12,9 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Group.png" />
       </Head>
-      <Header />
 
       <main className={styles.main}>
+        <Header />
+
         <Hero />
       </main>
     </>

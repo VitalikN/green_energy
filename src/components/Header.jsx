@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+
 import styles from "@/sass/layouts/header.module.scss";
-import Burger from "./burger";
+import Burger from "./Burger";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
