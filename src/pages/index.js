@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/sass/layouts/home.module.scss";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-        <div>hi</div>
+        <Hero />
       </main>
     </>
   );

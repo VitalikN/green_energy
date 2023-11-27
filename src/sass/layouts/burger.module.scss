@@ -64,7 +64,8 @@
   border-radius: 25px;
   background: rgba(23, 61, 51, 0.75);
   width: 320px;
-  height: 701px;
+  height: calc(100vh - 76px);
+
   backdrop-filter: blur(12.5px);
   z-index: 2;
   padding: 24px;
@@ -79,9 +80,10 @@
     right: -150px;
   }
   @include desktop {
+    height: calc(100vh - 54px);
+
     top: 0;
     width: 365px;
-    height: 873px;
   }
 }
 .menu__box__icon {
