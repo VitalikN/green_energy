@@ -1,0 +1,32 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.logo {
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+.logo__chip {
+  font-family: FONTSPRING DEMO - All Round Gothic Thick;
+  color: #173d33;
+  @include font(33px, 500, 40px);
+  letter-spacing: -1.32px;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #97d28b;
+  }
+}
+.chipContainer {
+  @include font(10px, 400, 9px);
+  letter-spacing: -0.4px;
+  width: 60px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+.logo__color {
+  color: #97d28b;
+}

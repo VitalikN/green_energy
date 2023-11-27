@@ -1,0 +1,23 @@
+@import "./mixins";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include mobile {
+    min-width: 360px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include tablet {
+    min-width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include desktop {
+    width: 1280px;
+
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
