@@ -3,6 +3,8 @@ import styles from "@/sass/layouts/home.module.scss";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
+import { firaSans } from "./fonts";
+import MainCompany from "@/components/MainCompany";
 export default function Home() {
   return (
     <>
@@ -13,10 +15,10 @@ export default function Home() {
         <link rel="icon" href="/Group.png" />
       </Head>
 
-      <main className={styles.main}>
-        <Header />
-
+      <Header />
+      <main className={`${styles.main} ${firaSans.className}`}>
         <Hero />
+        <MainCompany />
       </main>
     </>
   );

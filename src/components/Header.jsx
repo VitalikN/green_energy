@@ -1,27 +1,11 @@
-import { useEffect, useState } from "react";
 import Logo from "./Logo";
-
 import styles from "@/sass/layouts/header.module.scss";
-import Burger from "./Burger";
+import { useEffect, useRef, useState } from "react";
+import Burger from "./burger";
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 0;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header className={`${styles.header} `}>
       <div className={`${styles.container} ${styles.container__header} `}>
         <Logo />
         <div className={styles.header__btn}>

@@ -44,45 +44,40 @@ const Burger = () => {
               <IoIosClose className={styles.menu__icon} />
               close
             </div>
-            <ul className={styles.menu__list}>
-              <li>
-                <Link
-                  href="#main"
-                  className={`${styles.menu__link} ${
-                    pathname === "#main" ? styles.active : ""
-                  }`}
-                >
-                  Main
-                  <GoArrowUpRight className={styles.menu__link__icon} />
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.menu__link} href="#">
-                  About
-                  <GoArrowUpRight className={styles.menu__link__icon} />
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.menu__link} href="#">
-                  Cases
-                  <GoArrowUpRight className={styles.menu__link__icon} />
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.menu__link} href="#">
-                  FAQ
-                  <GoArrowUpRight className={styles.menu__link__icon} />
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.menu__link} href="#">
-                  Contact Us
-                  <GoArrowUpRight className={styles.menu__link__icon} />
-                </Link>
-              </li>
-            </ul>
+
+            <nav className={styles.menu__list}>
+              <Link
+                href="#main"
+                className={`${styles.menu__link} ${
+                  pathname === "#main" ? styles.active : ""
+                }`}
+              >
+                Main
+                <GoArrowUpRight className={styles.menu__link__icon} />
+              </Link>
+
+              <Link className={styles.menu__link} href="#">
+                About
+                <GoArrowUpRight className={styles.menu__link__icon} />
+              </Link>
+
+              <Link className={styles.menu__link} href="#">
+                Cases
+                <GoArrowUpRight className={styles.menu__link__icon} />
+              </Link>
+
+              <Link className={styles.menu__link} href="#">
+                FAQ
+                <GoArrowUpRight className={styles.menu__link__icon} />
+              </Link>
+
+              <Link className={styles.menu__link} href="#">
+                Contact Us
+                <GoArrowUpRight className={styles.menu__link__icon} />
+              </Link>
+            </nav>
             <ul className={styles.menu__list__social__networks}>
-              <li>
+              <li className={styles.menu__item}>
                 <Link
                   href="https://www.facebook.com/"
                   target="_blank"
@@ -97,7 +92,7 @@ const Burger = () => {
                   </svg>
                 </Link>
               </li>
-              <li>
+              <li className={styles.menu__item}>
                 <Link
                   target="_blank"
                   href="https://www.instagram.com/"

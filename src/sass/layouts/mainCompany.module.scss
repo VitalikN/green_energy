@@ -1,0 +1,12 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+
+.mainCompany__section {
+  padding-top: 36px;
+  @include tablet {
+    padding-top: 100px;
+  }
+  @include desktop {
+    padding-top: 120px;
+  }
+}

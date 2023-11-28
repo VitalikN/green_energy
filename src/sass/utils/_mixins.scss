@@ -1,3 +1,8 @@
+@mixin mobileMax {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
 @mixin mobile {
   @media screen and (min-width: 360px) {
     @content;

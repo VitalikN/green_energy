@@ -55,6 +55,8 @@
   z-index: 1;
 }
 .menu {
+  display: flex;
+  flex-direction: column;
   cursor: initial;
   position: absolute;
   right: 0;
@@ -143,6 +145,11 @@
   display: flex;
   gap: 8px;
   margin-top: auto;
+  align-items: flex-end;
+}
+
+.menu__item {
+  height: 24px;
 }
 
 .menu__social__networks {

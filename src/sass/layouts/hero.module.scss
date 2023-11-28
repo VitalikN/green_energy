@@ -1,0 +1,156 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+
+.hero {
+  padding-top: 110px;
+  @include tablet {
+    padding-top: 128px;
+  }
+  @include desktop {
+    padding-top: 152px;
+  }
+}
+.hero__container__title {
+  display: flex;
+  justify-content: center;
+  @include mobileMax {
+    flex-direction: column;
+  }
+  @include tablet {
+    justify-content: space-between;
+  }
+  border-bottom: 1px solid #97d28b;
+  padding-bottom: 24px;
+}
+.hero__title {
+  color: #173d33;
+
+  text-transform: uppercase;
+
+  @include font(36px, 400, 36px);
+
+  @include mobileMax {
+    margin-bottom: 24px;
+    min-width: 320px;
+  }
+  @include tablet {
+    width: 300px;
+    @include font(48px, 400, 48px);
+  }
+  @include desktop {
+    width: 485px;
+    @include font(64px, 400, 64px);
+  }
+}
+
+.hero__text {
+  color: #173d33;
+
+  font-size: 16px;
+
+  font-weight: 400;
+  letter-spacing: -0.64px;
+  @include mobileMax {
+    text-align: justify;
+  }
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
+  @include tablet {
+    width: 342px;
+    margin-bottom: 43px;
+  }
+  @include desktop {
+    width: 363px;
+    margin-right: 96px;
+    margin-bottom: 20px;
+  }
+}
+.hero__btn {
+  display: inline-flex;
+  height: 39px;
+  padding: 4px 4px 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 500px;
+  border: 1px solid #97d28b;
+
+  color: #173d33;
+  @include font(16px, 400, 18px);
+
+  letter-spacing: -0.64px;
+  transition: all 0.3s ease;
+  &:focus,
+  &:hover {
+    border: 1px solid #173d33;
+    color: #97d28b;
+    background: #173d33;
+  }
+}
+
+.hero__icon {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #97d28b;
+  color: #173d33;
+}
+.hero__box__link {
+  display: flex;
+  align-items: center;
+
+  @include mobileMax {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+  }
+  padding-top: 12px;
+  padding-bottom: 36px;
+}
+
+.hero__box {
+  width: 343px;
+  display: flex;
+  justify-content: center;
+  @include mobileMax {
+    margin-top: 8px;
+  }
+  @include tablet {
+    justify-content: space-between;
+  }
+  @include desktop {
+    width: 460px;
+  }
+}
+
+.hero__link {
+  color: #173d33;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  letter-spacing: -0.64px;
+}
+
+.ecosolution {
+  @include mobileMax {
+    display: none;
+  }
+}
+
+.hero__overley {
+  background: url("/energy.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

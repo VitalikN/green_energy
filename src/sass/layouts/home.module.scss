@@ -1,4 +1,10 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+
 .main {
   height: 100vh;
   padding-top: 112px;
+  @include desktop {
+    padding-top: 88px;
+  }
 }
