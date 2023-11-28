@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-import { oswald, firaSans } from "@/pages/fonts";
+import { oswald, firaSans } from "@/utils/fonts";
 import styles from "@/sass/layouts/hero.module.scss";
 
 const Hero = () => {

@@ -3,7 +3,7 @@ import styles from "@/sass/layouts/home.module.scss";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
-import { firaSans } from "./fonts";
+import { firaSans } from "../utils/fonts";
 import MainCompany from "@/components/MainCompany";
 export default function Home() {
   return (
