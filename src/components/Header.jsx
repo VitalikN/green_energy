@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import styles from "@/sass/layouts/header.module.scss";
 import { useEffect, useRef, useState } from "react";
-import Burger from "./burger";
+import Burger from "./Burger";
 
 const Header = () => {
   return (
