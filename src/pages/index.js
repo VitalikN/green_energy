@@ -7,6 +7,7 @@ import Electricity from "@/components/Electricity";
 
 import { firaSans } from "../utils/fonts";
 import styles from "@/sass/layouts/home.module.scss";
+import Cases from "@/components/Cases";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <MainCompany />
         <Electricity />
+        <Cases />
       </main>
     </>
   );

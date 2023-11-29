@@ -24,8 +24,6 @@
   padding-bottom: 24px;
 }
 .hero__title {
-  color: #173d33;
-
   text-transform: uppercase;
 
   @include font(36px, 400, 36px);
@@ -52,8 +50,6 @@
 }
 
 .hero__text {
-  color: #173d33;
-
   font-size: 16px;
 
   font-weight: 400;
@@ -79,6 +75,7 @@
   @include mobileMax {
     margin: 0 auto;
   }
+  cursor: pointer;
   display: inline-flex;
   height: 39px;
   padding: 4px 4px 4px 16px;
@@ -110,7 +107,6 @@
   gap: 10px;
   border-radius: 100px;
   background: #97d28b;
-  color: #173d33;
 }
 .hero__box__link {
   display: flex;
@@ -143,8 +139,6 @@
 }
 
 .hero__link {
-  color: #173d33;
-
   font-size: 16px;
 
   font-weight: 400;

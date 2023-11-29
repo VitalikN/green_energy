@@ -4,6 +4,9 @@
   --font-mono: "Oswald", "Fira Sans", sans-serif, ui-monospace, "Cascadia Mono",
     "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --swiper-pagination-fraction-color: #173d33;
+  /* // */
 }
 
 * {
@@ -17,6 +20,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background: #f3f5fa;
+  color: #173d33;
 }
 
 body {
