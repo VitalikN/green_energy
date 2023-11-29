@@ -1,7 +1,7 @@
 @import "../utils/container.scss";
 @import "../utils/mixins";
 
-.mainCompany__section {
+.section {
   padding-top: 36px;
   @include tablet {
     padding-top: 100px;
@@ -13,6 +13,11 @@
 .mainCompany__container__title {
   @include tablet {
     display: flex;
+    width: 708px;
+    margin: 0 auto;
+  }
+  @include desktop {
+    width: 100%;
   }
 }
 .title {
@@ -24,17 +29,23 @@
   line-height: 28px; /* 100% */
   text-transform: uppercase;
 
-  margin-bottom: 24px;
   @include tablet {
     font-size: 36px;
-    width: 272px;
-    margin-right: auto;
     line-height: 36px;
   }
   @include desktop {
     font-size: 48px;
-    width: 365px;
     line-height: 48px;
+  }
+}
+.mainCompany__title {
+  margin-bottom: 24px;
+  @include tablet {
+    width: 272px;
+    margin-right: auto;
+  }
+  @include desktop {
+    width: 365px;
   }
 }
 
@@ -43,7 +54,7 @@
     content: "";
     display: flex;
     height: 110px;
-    border: 1px solid #97d28b;
+    border-left: 1px solid #97d28b;
   }
   @include desktop {
     height: 87px;

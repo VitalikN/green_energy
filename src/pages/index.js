@@ -1,10 +1,13 @@
 import Head from "next/head";
-import styles from "@/sass/layouts/home.module.scss";
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import MainCompany from "@/components/MainCompany";
+import Electricity from "@/components/Electricity";
 
 import { firaSans } from "../utils/fonts";
-import MainCompany from "@/components/MainCompany";
+import styles from "@/sass/layouts/home.module.scss";
+
 export default function Home() {
   return (
     <>
@@ -19,6 +22,7 @@ export default function Home() {
       <main className={`${styles.main} ${firaSans.className}`}>
         <Hero />
         <MainCompany />
+        <Electricity />
       </main>
     </>
   );

@@ -3,14 +3,15 @@
 .container {
   width: 100%;
   margin: 0 auto;
-
+  @include mobileMax {
+    max-width: 480px;
+  }
   @include mobile {
-    min-width: 360px;
     padding-left: 20px;
     padding-right: 20px;
   }
   @include tablet {
-    min-width: 768px;
+    width: 768px;
     padding-left: 30px;
     padding-right: 30px;
   }

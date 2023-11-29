@@ -4,10 +4,12 @@ import Image from "next/image";
 
 const MainCompany = () => {
   return (
-    <section className={styles.mainCompany__section}>
+    <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.mainCompany__container__title}>
-          <h2 className={`${styles.title} ${oswald.className}`}>
+          <h2
+            className={`${styles.title} ${oswald.className} ${styles.mainCompany__title}`}
+          >
             Main values of our company
           </h2>
           <span className={styles.chip}></span>
