@@ -49,7 +49,7 @@ const Hero = () => {
           <h1 className={`${styles.hero__title} ${oswald.className}    `}>
             renewable energy for any task
           </h1>
-          <div>
+          <div className={styles.hero__box__text}>
             <p className={`${styles.hero__text}  ${firaSans.className} `}>
               Development and implementation of renewable non-polluting energy
               sources, generating power generation using energy wind, sun,

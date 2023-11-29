@@ -43,6 +43,13 @@
     @include font(64px, 400, 64px);
   }
 }
+.hero__box__text {
+  @include mobileMax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .hero__text {
   color: #173d33;
@@ -69,6 +76,9 @@
   }
 }
 .hero__btn {
+  @include mobileMax {
+    margin: 0 auto;
+  }
   display: inline-flex;
   height: 39px;
   padding: 4px 4px 4px 16px;
