@@ -71,44 +71,7 @@
     margin-bottom: 20px;
   }
 }
-.hero__btn {
-  @include mobileMax {
-    margin: 0 auto;
-  }
-  cursor: pointer;
-  display: inline-flex;
-  height: 39px;
-  padding: 4px 4px 4px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  border-radius: 500px;
-  border: 1px solid #97d28b;
 
-  color: #173d33;
-  @include font(16px, 400, 18px);
-
-  letter-spacing: -0.64px;
-  transition: all 0.3s ease;
-  &:focus,
-  &:hover {
-    border: 1px solid #173d33;
-    color: #97d28b;
-    background: #173d33;
-  }
-}
-
-.hero__icon {
-  display: flex;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 100px;
-  background: #97d28b;
-  color: #173d33;
-}
 .hero__box__link {
   display: flex;
   align-items: center;

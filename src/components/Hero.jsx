@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import { useEffect, useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
 
 import { oswald, firaSans } from "@/utils/fonts";
 import styles from "@/sass/layouts/hero.module.scss";
+import { ButtonLearn } from "./Button";
 
 const Hero = () => {
   const [dynamicHeight, setDynamicHeight] = useState(200);
@@ -55,12 +55,7 @@ const Hero = () => {
               sources, generating power generation using energy wind, sun,
               water, biomass
             </p>
-            <button className={styles.hero__btn}>
-              Learn more
-              <span className={styles.hero__icon}>
-                <BsArrowRight />
-              </span>
-            </button>
+            <ButtonLearn title={"Learn more"} />
           </div>
         </div>
         <div className={styles.hero__box__link}>

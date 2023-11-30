@@ -5,7 +5,7 @@ import { useState } from "react";
 import questionsData from "../../questionsData.json";
 
 import { HiMinusSm, HiOutlinePlusSm } from "react-icons/hi";
-import Button from "./Button";
+import { Button } from "./Button";
 
 const Questions = () => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -2,7 +2,7 @@
 @import "../utils/mixins";
 
 .main {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 112px;
   @include desktop {
     padding-top: 88px;

@@ -1,0 +1,67 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+
+.network__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include tablet {
+    width: 244px;
+  }
+  @include desktop {
+    gap: 32px;
+    width: 466px;
+  }
+}
+
+.network__tel {
+  margin-bottom: 12px;
+}
+.network__list__item__title {
+  text-align: justify;
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  padding-bottom: 8px;
+  @include desktop {
+    padding-bottom: 16px;
+  }
+}
+
+.network__list__item__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  transition: all 0.3s ease;
+}
+.network__social__box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.network__social__chip {
+  cursor: pointer;
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  &:focus,
+  &:hover {
+    color: #97d28b;
+    scale: 1.3;
+  }
+  @include desktop {
+    padding: 0;
+  }
+}
+.network__social {
+  min-width: 24px;
+  transition: all 0.3s ease;
+}
+.network__list__item__link:hover .network__social {
+  color: #97d28b;
+}

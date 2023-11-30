@@ -10,15 +10,16 @@
   margin-top: 14px;
   margin-bottom: 8px;
 }
+.logoContainer:focus .logo__chip,
+.logoContainer:hover .logo__chip {
+  color: #97d28b;
+}
 .logo__chip {
   font-family: FONTSPRING DEMO - All Round Gothic Thick;
   color: #173d33;
   @include font(33px, 500, 40px);
   letter-spacing: -1.32px;
   transition: all 0.3s ease;
-  &:hover {
-    color: #97d28b;
-  }
 }
 .chipContainer {
   @include font(10px, 400, 9px);

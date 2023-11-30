@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import styles from "@/sass/layouts/header.module.scss";
 import Burger from "./Burger";
-import Button from "./Button";
+import { Button } from "./Button";
 
 const Header = () => {
   return (

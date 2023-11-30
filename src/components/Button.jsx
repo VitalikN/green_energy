@@ -1,6 +1,7 @@
 import styles from "@/sass/layouts/button.module.scss";
+import { BsArrowRight } from "react-icons/bs";
 
-const Button = ({ title }) => (
+export const Button = ({ title }) => (
   <button className={styles.header__touch}>
     {title}
     <svg className={styles.header__touch__chip} width="14px" height="14px">
@@ -9,4 +10,11 @@ const Button = ({ title }) => (
   </button>
 );
 
-export default Button;
+export const ButtonLearn = ({ title, type = "button" }) => (
+  <button type={type} className={styles.hero__btn}>
+    {title}
+    <span className={styles.hero__icon}>
+      <BsArrowRight />
+    </span>
+  </button>
+);

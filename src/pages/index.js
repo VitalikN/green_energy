@@ -10,6 +10,7 @@ import Contact from "@/components/Contact";
 
 import { firaSans } from "../utils/fonts";
 import styles from "@/sass/layouts/home.module.scss";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Questions />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }

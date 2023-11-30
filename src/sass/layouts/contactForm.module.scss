@@ -1,0 +1,83 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+
+.error {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+
+  color: #d28b8b;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.48px;
+}
+.form {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  padding: 36px 12px;
+  background-color: #eaedf1;
+  @include tablet {
+    width: 342px;
+    padding: 36px 24px;
+  }
+  @include desktop {
+    padding: 48px;
+    width: 596px;
+  }
+}
+.form__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include desktop {
+    gap: 12px;
+  }
+}
+.label {
+  color: #173d33;
+
+  text-align: justify;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #97d28b;
+  background: none;
+
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+
+  padding-bottom: 8px;
+  @include desktop {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+  }
+}
+.input::placeholder {
+  color: #bdbdbd;
+}
+
+.errorBorder {
+  border-bottom: 1px solid #d28b8b;
+}
+
+.textarea {
+  resize: none;
+  height: 147px;
+}
+
+.btn__box {
+  margin-left: auto;
+}

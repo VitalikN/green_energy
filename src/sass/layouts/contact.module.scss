@@ -1,3 +1,24 @@
 @import "../utils/container.scss";
 @import "../utils/mixins";
 @import "./electricity.module.scss";
+
+.contact__title {
+  width: 100%;
+}
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #97d28b;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  @include desktop {
+    padding: 120px 0;
+  }
+}
