@@ -9,14 +9,9 @@
   background-color: transparent;
   transition: background-color 0.3s ease;
   background: #f3f5fa;
-  &.scrollingHeader {
-    background-color: red !important;
-  }
+  z-index: 10;
 }
 
-.scrollingHeader {
-  background-color: red;
-}
 .container__header {
   display: flex;
   align-items: center;
@@ -33,41 +28,8 @@
   display: flex;
   gap: 12px;
 }
-
-.header__touch {
-  display: none;
-  @include tablet {
-    cursor: pointer;
-    display: inline-flex;
-    padding: 10px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border-radius: 500px;
-    background: #97d28b;
-    outline: none;
-    border: none;
-
-    color: #173d33;
-
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.64px;
-    transition: all 0.3s ease;
-    &:hover,
-    &:focus {
-      background: #173d33;
-      color: #97d28b;
-    }
+.header__display {
+  @include mobileMax {
+    display: none;
   }
-}
-
-.header__touch__chip {
-  fill: #173d33;
-  transition: all 0.3s ease;
-}
-.header__touch:hover .header__touch__chip {
-  fill: #97d28b;
 }

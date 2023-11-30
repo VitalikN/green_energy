@@ -4,10 +4,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import MainCompany from "@/components/MainCompany";
 import Electricity from "@/components/Electricity";
+import Cases from "@/components/Cases";
+import Questions from "@/components/Questions";
+import Contact from "@/components/Contact";
 
 import { firaSans } from "../utils/fonts";
 import styles from "@/sass/layouts/home.module.scss";
-import Cases from "@/components/Cases";
 
 export default function Home() {
   return (
@@ -25,6 +27,8 @@ export default function Home() {
         <MainCompany />
         <Electricity />
         <Cases />
+        <Questions />
+        <Contact />
       </main>
     </>
   );

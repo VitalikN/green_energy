@@ -151,6 +151,12 @@
   gap: 10px;
   border-radius: 100px;
   background: #97d28b;
+  transition: all 0.3s ease;
+  &:focus,
+  &:hover {
+    background: #173d33;
+    color: #97d28b;
+  }
 }
 .cases__list__item__icon {
   width: 28px;

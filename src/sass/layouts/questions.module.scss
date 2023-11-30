@@ -1,0 +1,140 @@
+@import "../utils/container.scss";
+@import "../utils/mixins";
+@import "./mainCompany.module.scss";
+
+.questions__container {
+  @include tablet {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 24px;
+    grid-template-areas:
+      "ul title"
+      "ul btn";
+    align-content: space-between;
+  }
+}
+.questions__list {
+  grid-area: ul;
+}
+.questions__title {
+  grid-area: title;
+}
+.questions__btn {
+  grid-area: btn;
+}
+
+.questions__title {
+  padding-bottom: 24px;
+  @include tablet {
+    width: 347px;
+    padding: 0;
+  }
+  @include desktop {
+    width: 398px;
+    margin: 0 auto;
+  }
+}
+
+.questions__list__item {
+  border-top: 1px solid #97d28b;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 16px 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px 8px;
+  grid-template-areas:
+    "icon item1"
+    "icon item2";
+  padding: 16px 0 0;
+
+  @include tablet {
+    gap: 16px;
+  }
+  @include desktop {
+    grid-template-columns: 24px 1fr;
+    padding: 24px 0 0;
+    gap: 24px;
+  }
+}
+.questions__list__item__icon {
+  grid-area: icon;
+}
+.questions__list__item__title {
+  grid-area: item1;
+}
+.questions__list__item__text {
+  grid-area: item2;
+}
+
+.questions__list__item__box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.questions__list__item__icon {
+  cursor: pointer;
+  color: #97d28b;
+  width: 16px;
+  height: 16px;
+  transition: all 0.5s ease;
+
+  @include tablet {
+    width: 28px;
+    height: 28px;
+  }
+
+  &:focus,
+  &:hover {
+    scale: 1.5;
+  }
+}
+.questions__minus {
+  color: #173d33;
+}
+.questions__list__item__title {
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+  @include desktop {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+}
+.questions__list__item__text {
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.56px;
+  padding-bottom: 16px;
+
+  @include desktop {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    padding-bottom: 24px;
+  }
+}
+.questions__answer {
+  padding-top: 20px;
+  text-align: center;
+  @include tablet {
+    padding: 0;
+  }
+
+  @include desktop {
+    font-size: 24px;
+
+    letter-spacing: -0.96px;
+  }
+}
+.questions__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
