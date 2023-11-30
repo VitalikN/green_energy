@@ -1,7 +1,6 @@
 import React from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import "yup-phone";
 
 import styles from "@/sass/layouts/contactForm.module.scss";
 import { ButtonLearn } from "./Button";
