@@ -11,7 +11,12 @@ export const Button = ({ title }) => (
 );
 
 export const ButtonLearn = ({ title, type = "button" }) => (
-  <button type={type} className={styles.hero__btn}>
+  <button
+    type={type}
+    className={`${styles.hero__btn} ${
+      title === "Send" ? styles.sendBtn : styles.learn
+    }`}
+  >
     {title}
     <span className={styles.hero__icon}>
       <BsArrowRight />
