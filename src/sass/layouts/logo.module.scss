@@ -12,11 +12,11 @@
 }
 .logoContainer:focus .logo__chip,
 .logoContainer:hover .logo__chip {
-  color: #97d28b;
+  color: var(--color-hover);
 }
 .logo__chip {
   font-family: FONTSPRING DEMO - All Round Gothic Thick;
-  color: #173d33;
+  color: var(--color-text);
   @include font(33px, 500, 40px);
   letter-spacing: -1.32px;
   transition: all 0.3s ease;
@@ -30,5 +30,5 @@
   margin-bottom: 7px;
 }
 .logo__color {
-  color: #97d28b;
+  color: var(--color-hover);
 }

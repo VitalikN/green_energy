@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { BsArrowRight } from "react-icons/bs";
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 
 import styles from "@/sass/layouts/footer.module.scss";
 import { firaSans } from "@/utils/fonts";

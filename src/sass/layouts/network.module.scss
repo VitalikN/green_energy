@@ -51,7 +51,7 @@
   transition: all 0.3s ease;
   &:focus,
   &:hover {
-    color: #97d28b;
+    color: var(--color-hover);
     scale: 1.3;
   }
   @include desktop {
@@ -63,5 +63,5 @@
   transition: all 0.3s ease;
 }
 .network__list__item__link:hover .network__social {
-  color: #97d28b;
+  color: var(--color-hover);
 }

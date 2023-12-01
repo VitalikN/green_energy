@@ -21,21 +21,16 @@
   }
 }
 .title {
-  color: #173d33;
+  color: var(--color-text);
+  @include font(28px, 400, 28px);
 
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px; /* 100% */
   text-transform: uppercase;
 
   @include tablet {
-    font-size: 36px;
-    line-height: 36px;
+    @include font(36px, 400, 36px);
   }
   @include desktop {
-    font-size: 48px;
-    line-height: 48px;
+    @include font(48px, 400, 48px);
   }
 }
 .mainCompany__title {
@@ -54,20 +49,20 @@
     content: "";
     display: flex;
     height: 110px;
-    border-left: 1px solid #97d28b;
+    border-left: var(--border);
   }
   @include desktop {
     height: 87px;
   }
 }
 .mainCompany__text {
-  color: #173d33;
+  color: var(--color-text);
 
   text-align: justify;
   font-size: 16px;
-  font-style: normal;
+
   font-weight: 400;
-  line-height: normal;
+
   letter-spacing: -0.64px;
   margin-bottom: 36px;
   @include tablet {
@@ -115,7 +110,7 @@
   }
 }
 .mainCompany__list__item {
-  background: #eaedf1;
+  background: var(--background-cases);
   padding: 12px;
   @include mobileMax {
     min-width: 148px;
@@ -133,7 +128,7 @@
   gap: 8px;
   align-items: center;
   padding: 1px 0 33px 0;
-  border-bottom: 1px solid #97d28b;
+  border-bottom: var(--border);
   margin-bottom: 12px;
   @include tablet {
     padding-bottom: 51px;
@@ -147,31 +142,26 @@
   }
 }
 .mainCompany__list__item__title {
-  color: #173d33;
+  color: var(--color-text);
+  @include font(16px, 400, 24px);
 
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
   text-transform: uppercase;
   @include tablet {
-    font-size: 18px;
+    @include font(18px, 400, 24px);
 
-    line-height: 24px;
     @include desktop {
-      font-size: 32px;
-      line-height: 48px;
+      @include font(32px, 400, 48px);
     }
   }
 }
 .mainCompany__list__item__text {
-  color: #173d33;
+  color: var(--color-text);
 
   text-align: justify;
   font-size: 14px;
-  font-style: normal;
+
   font-weight: 400;
-  line-height: normal;
+
   letter-spacing: -0.56px;
   @include desktop {
     font-size: 16px;

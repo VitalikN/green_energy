@@ -1,55 +1,22 @@
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { HiArrowUpRight } from "react-icons/hi2";
-
-import casesList from "../../casesList.json";
-
-import { oswald } from "@/utils/fonts";
-import styles from "@/sass/layouts/cases.module.scss";
 import Link from "next/link";
-//
+import { useCasesSlider } from "./hooks";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { HiArrowUpRight } from "react-icons/hi2";
+
+import casesList from "../casesList.json";
+
+import { oswald } from "@/utils/fonts";
+import styles from "@/sass/layouts/cases.module.scss";
+
 const Cases = () => {
-  const sliderRef = useRef(null);
-  const [slidesToShow, setSlidesToShow] = useState(1);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    arrows: false,
-    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
-  };
-
-  const next = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const previous = () => {
-    sliderRef.current.slickPrev();
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      const w = window.innerWidth;
-      setSlidesToShow(w <= 767 ? 1 : 2);
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { sliderRef, slidesToShow, currentSlide, settings, next, previous } =
+    useCasesSlider();
 
   return (
     <section className={styles.section} id="Cases">

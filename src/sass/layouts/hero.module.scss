@@ -20,7 +20,7 @@
   @include tablet {
     justify-content: space-between;
   }
-  border-bottom: 1px solid #97d28b;
+  border-bottom: var(--border);
   padding-bottom: 24px;
 }
 .hero__title {

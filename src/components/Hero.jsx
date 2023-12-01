@@ -1,48 +1,14 @@
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
-
 import { oswald, firaSans } from "@/utils/fonts";
 import styles from "@/sass/layouts/hero.module.scss";
 import { ButtonLearn } from "./Button";
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
+import { useDynamicHeight } from "./hooks";
 
 const Hero = () => {
-  const [dynamicHeight, setDynamicHeight] = useState(200);
+  const dynamicHeight = useDynamicHeight();
 
-  useEffect(() => {
-    const handleResize = () => {
-      const viewportWidth = Math.min(window.innerWidth, 1280);
-
-      const w1 = 360,
-        h1 = 200;
-      const w2 = 768,
-        h2 = 348;
-      const w3 = 1280,
-        h3 = 524;
-
-      let calculatedHeight;
-
-      if (viewportWidth <= w1) {
-        calculatedHeight = h1;
-      } else if (viewportWidth <= w2) {
-        calculatedHeight = h1 + ((viewportWidth - w1) * (h2 - h1)) / (w2 - w1);
-      } else if (viewportWidth <= w3) {
-        calculatedHeight = h2 + ((viewportWidth - w2) * (h3 - h2)) / (w3 - w2);
-      } else {
-        calculatedHeight = h3;
-      }
-      setDynamicHeight(calculatedHeight);
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <section className={styles.hero}>
       <div className={styles.container}>

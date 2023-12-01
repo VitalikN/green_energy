@@ -14,11 +14,11 @@
   gap: 12px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: #dcefd8;
+  background: var(--background-burger);
   transition: all 0.3s ease;
   &:focus,
   &:hover {
-    background: #97d28b;
+    background: var(--background);
     border-radius: 50%;
   }
 }
@@ -65,7 +65,7 @@
 
   flex-shrink: 0;
   border-radius: 25px;
-  background: rgba(23, 61, 51, 0.75);
+  background: var(--background-menu);
   width: 320px;
   height: calc(100vh - 76px);
 
@@ -93,7 +93,7 @@
   display: flex;
   width: 65px;
   padding-bottom: 5.5px;
-  color: #fff;
+  color: var(--color-icon);
   cursor: pointer;
   font-size: 16px;
   font-style: normal;
@@ -103,16 +103,16 @@
   transition: all 0.3s ease;
   &:focus,
   &:hover {
-    color: #97d28b;
+    color: var(--color-hover);
   }
 }
 .menu__icon {
-  color: #fff;
+  color: var(--color-icon);
   font-size: 20px;
   transition: all 0.3s ease;
 }
 .menu__box__icon:hover .menu__icon {
-  color: #97d28b;
+  color: var(--color-hover);
 }
 .menu__list {
   padding-top: 16px;
@@ -122,7 +122,7 @@
   border-top: 1px solid #fff;
 }
 .active {
-  color: #97d28b;
+  color: var(--color-hover);
 }
 .menu__link {
   display: flex;
@@ -137,14 +137,9 @@
   letter-spacing: -0.96px;
   transition: all 0.3s ease;
 
-  // &.active {
-  //   background-color: #007f;
-  //   color: red;
-  // }
-
   &:focus,
   &:hover {
-    color: #fff;
+    color: var(--color-icon);
   }
 }
 .menu__link__icon {
@@ -163,11 +158,11 @@
 }
 
 .menu__social__networks {
-  color: #ffffff;
+  color: var(--color-icon) fff;
   transition: all 0.3s ease;
   &:focus,
   &:hover {
-    color: #97d28b;
+    color: var(--color-hover);
   }
 }
 .menu__social {

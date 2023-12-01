@@ -1,37 +1,18 @@
-import { useEffect, useState } from "react";
-
 import styles from "@/sass/layouts/burger.module.scss";
 import Link from "next/link";
 import { IoIosClose } from "react-icons/io";
 import { GoArrowUpRight } from "react-icons/go";
 
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
+import { useMenu } from "./hooks";
 
 const Burger = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add("body-no-scroll");
-    } else {
-      document.body.classList.remove("body-no-scroll");
-    }
+  const { menuOpen, toggleMenu, closeMenu } = useMenu();
 
-    return () => {
-      document.body.classList.remove("body-no-scroll");
-    };
-  }, [menuOpen]);
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-    console.log("click");
-  };
   return (
     <>
       <div className={styles.burger__box}>
-        <div
-          className={styles.burger}
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
+        <div className={styles.burger} onClick={toggleMenu}>
           <button className={styles.burger__button}>
             <div className={styles.line}></div>
             <div className={styles.line}></div>

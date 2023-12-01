@@ -28,7 +28,7 @@
     content: "";
     display: flex;
     height: 65px;
-    border-left: 1px solid #97d28b;
+    border-left: var(--border);
   }
   @include desktop {
     height: 96px;
@@ -50,7 +50,7 @@
   }
 }
 .number {
-  color: #173d33;
+  color: var(--color-text);
 
   text-align: justify;
   font-size: 28px;
@@ -71,7 +71,7 @@
   align-items: flex-start;
   gap: 10px;
   border-radius: 100px;
-  border: 1px solid #173d33;
+  border: var(--border-hover);
 
   transition: all 0.3s ease;
   @include desktop {
@@ -85,8 +85,9 @@
   }
   &:focus,
   &:hover {
-    border: 1px solid #97d28b;
-    color: #97d28b;
+    border: var(--border);
+
+    color: var(--color-hover);
   }
 }
 
@@ -104,7 +105,8 @@
   }
 }
 .cases__list__item {
-  background: #eaedf1;
+  cursor: grab;
+  background: var(--background-cases);
   height: auto;
   @include mobileMax {
     width: 100%;
@@ -152,7 +154,7 @@
   }
 }
 .cases__list__item__title {
-  color: #173d33;
+  color: var(--color-text);
   width: 190px;
   text-align: justify;
   font-size: 18px;
@@ -179,12 +181,12 @@
   align-items: flex-start;
   gap: 10px;
   border-radius: 100px;
-  background: #97d28b;
+  background: var(--background);
   transition: all 0.3s ease;
   &:focus,
   &:hover {
-    background: #173d33;
-    color: #97d28b;
+    background: var(--background-hover);
+    color: var(--color-hover);
   }
 }
 .cases__list__item__icon {
@@ -194,7 +196,7 @@
 .cases__list__item__box {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #97d28b;
+  border-top: var(--border);
   padding: 12px 0 12px 0;
   margin: 0 12px 0 12px;
 
@@ -204,7 +206,7 @@
   }
 }
 .cases__list__item__box__text {
-  color: #173d33;
+  color: var(--color-text);
 
   text-align: justify;
   font-size: 12px;

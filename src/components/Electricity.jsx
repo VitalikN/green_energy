@@ -1,17 +1,10 @@
 import styles from "@/sass/layouts/electricity.module.scss";
 import { oswald } from "@/utils/fonts";
-import { useEffect, useState } from "react";
+import { useElectricityCounter } from "./hooks";
 
 const Electricity = () => {
-  const [count, setCount] = useState(1134147814);
+  const count = useElectricityCounter();
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCount((prevCount) => prevCount + 1);
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
   return (
     <section className={styles.section}>
       <div className={`${styles.container} ${styles.electricity__container}`}>

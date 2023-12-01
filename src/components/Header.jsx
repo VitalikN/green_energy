@@ -1,9 +1,10 @@
 import Logo from "./Logo";
-import styles from "@/sass/layouts/header.module.scss";
 import Burger from "./Burger";
 import { Button } from "./Button";
 
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
+
+import styles from "@/sass/layouts/header.module.scss";
 
 const Header = () => {
   return (

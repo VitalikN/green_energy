@@ -7,7 +7,7 @@ import questionsData from "../../questionsData.json";
 import { HiMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 import { Button } from "./Button";
 
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 
 const Questions = () => {
   const [activeIndex, setActiveIndex] = useState(0);

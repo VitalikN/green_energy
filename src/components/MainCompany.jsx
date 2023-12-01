@@ -1,4 +1,4 @@
-import { oswald, firaSans } from "@/utils/fonts";
+import { oswald } from "@/utils/fonts";
 import styles from "@/sass/layouts/mainCompany.module.scss";
 import Image from "next/image";
 
