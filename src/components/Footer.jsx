@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { BsArrowRight } from "react-icons/bs";
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 
 import styles from "@/sass/layouts/footer.module.scss";
 import { firaSans } from "@/utils/fonts";
@@ -12,11 +13,20 @@ const Footer = () => {
           <Logo />
         </div>
         <div className={styles.footer__arrow__box}>
-          <span
-            className={`${styles.footer__icon__chip} ${styles.footer__chip}`}
+          <LinkScroll
+            activeClass="active"
+            to="main"
+            spy={true}
+            smooth={true}
+            offset={-120}
+            duration={1700}
           >
-            <BsArrowRight className={styles.footer__icon} />
-          </span>
+            <span
+              className={`${styles.footer__icon__chip} ${styles.footer__chip}`}
+            >
+              <BsArrowRight className={styles.footer__icon} />
+            </span>
+          </LinkScroll>
         </div>
         <div className={styles.footer__box}>
           <Link

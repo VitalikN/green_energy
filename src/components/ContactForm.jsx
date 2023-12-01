@@ -18,9 +18,7 @@ const validationSchema = Yup.object({
   tel: Yup.string()
     .required("Enter a phone number")
     .matches(/^(\+380|0)[3-9][0-9]\d{7}$/, "Wrong Phone"),
-  message: Yup.string()
-    .min(5, "Wrong message - min 5 characters")
-    .required("Please fill in"),
+  message: Yup.string(),
 });
 
 const ContactForm = () => {

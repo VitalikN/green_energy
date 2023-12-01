@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const MainCompany = () => {
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
+    <section className={styles.section} id="About">
+      <div className={styles.container} id="main">
         <div className={styles.mainCompany__container__title}>
           <h2
             className={`${styles.title} ${oswald.className} ${styles.mainCompany__title}`}

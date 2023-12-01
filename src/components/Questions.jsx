@@ -7,6 +7,8 @@ import questionsData from "../../questionsData.json";
 import { HiMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 import { Button } from "./Button";
 
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+
 const Questions = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -15,7 +17,7 @@ const Questions = () => {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="FAQ">
       <div className={`${styles.container} ${styles.questions__container}`}>
         <h2
           className={`${styles.title} ${oswald.className} ${styles.questions__title}`}
@@ -56,7 +58,17 @@ const Questions = () => {
           >
             Didn`t find the answer to your question?
           </p>
-          <Button title={"Contact Us"} />
+          <LinkScroll
+            activeClass="active"
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={1000}
+            className={styles.menu__link}
+          >
+            <Button title={"Contact Us"} />
+          </LinkScroll>
         </div>
       </div>
     </section>

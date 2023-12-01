@@ -61,7 +61,7 @@ const Cases = () => {
     };
   }, []);
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="Cases">
       <div className={styles.container}>
         <div className={styles.cases__container}>
           <h2

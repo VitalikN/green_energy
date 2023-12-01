@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { oswald, firaSans } from "@/utils/fonts";
 import styles from "@/sass/layouts/hero.module.scss";
 import { ButtonLearn } from "./Button";
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 
 const Hero = () => {
   const [dynamicHeight, setDynamicHeight] = useState(200);
@@ -55,7 +56,17 @@ const Hero = () => {
               sources, generating power generation using energy wind, sun,
               water, biomass
             </p>
-            <ButtonLearn title={"Learn more"} />
+            <LinkScroll
+              activeClass="active"
+              to="Cases"
+              spy={true}
+              smooth={true}
+              offset={-90}
+              duration={1400}
+              className={styles.menu__link}
+            >
+              <ButtonLearn title={"Learn more"} />
+            </LinkScroll>
           </div>
         </div>
         <div className={styles.hero__box__link}>
