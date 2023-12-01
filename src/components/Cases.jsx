@@ -1,13 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCube, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/effect-cube";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { HiArrowUpRight } from "react-icons/hi2";
@@ -16,40 +8,38 @@ import casesList from "../../casesList.json";
 
 import { oswald } from "@/utils/fonts";
 import styles from "@/sass/layouts/cases.module.scss";
+import Link from "next/link";
+//
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Cases = () => {
-  const [dynamicHeight, setDynamicHeight] = useState(168);
-  const [dynamicWidth, setDynamicWidth] = useState(1280);
+  const sliderRef = useRef(null);
+  const [slidesToShow, setSlidesToShow] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    arrows: false,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+  };
+
+  const next = () => {
+    sliderRef.current.slickNext();
+  };
+
+  const previous = () => {
+    sliderRef.current.slickPrev();
+  };
 
   useEffect(() => {
     const handleResize = () => {
       const w = window.innerWidth;
-
-      const w0 = 360,
-        h0 = 168;
-      const w1 = 768,
-        h1 = 168;
-      const w2 = 1280,
-        h2 = 339;
-
-      let calculatedWidth, calculatedHeight;
-
-      if (w <= w0) {
-        calculatedWidth = 320;
-        calculatedHeight = h0;
-      } else if (w <= w1) {
-        calculatedWidth = w;
-        calculatedHeight = h0 + ((w - w0) * (h1 - h0)) / (w1 - w0);
-      } else if (w <= w2) {
-        calculatedWidth = w;
-        calculatedHeight = h1 + ((w - w1) * (h2 - h1)) / (w2 - w1);
-      } else {
-        calculatedWidth = w2;
-        calculatedHeight = h2;
-      }
-
-      setDynamicHeight(calculatedHeight);
-      setDynamicWidth(calculatedWidth);
+      setSlidesToShow(w <= 767 ? 1 : 2);
     };
 
     handleResize();
@@ -60,6 +50,7 @@ const Cases = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <section className={styles.section} id="Cases">
       <div className={styles.container}>
@@ -73,56 +64,47 @@ const Cases = () => {
 
           <div className={styles.box__chip}>
             <p className={styles.number}>
-              01 <span className={styles.number__chip}>/05</span>
+              {currentSlide + 1}
+              <span className={styles.number__chip}>/{casesList.length}</span>
             </p>
 
             <div>
-              <span className={styles.cases__chip}>
+              <span className={styles.cases__chip} onClick={previous}>
                 <BsArrowLeft className={styles.cases__arrow} />
               </span>
 
-              <span className={styles.cases__chip}>
+              <span className={styles.cases__chip} onClick={next}>
                 <BsArrowRight className={styles.cases__arrow} />
               </span>
             </div>
           </div>
         </div>
         <div className={styles.cases__list}>
-          <Swiper
-            effect={"cube"}
-            grabCursor={true}
-            cubeEffect={{
-              shadow: true,
-              slideShadows: true,
-              shadowOffset: 20,
-              shadowScale: 0.94,
-            }}
-            modules={[EffectCube, Pagination]}
-            className="mySwiper"
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={1}
-          >
+          <Slider {...settings} ref={sliderRef}>
             {casesList.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div key={item.id} className={styles.cases__list__item}>
-                  <Image
-                    className={styles.cases__img}
-                    src={item.image.src}
-                    alt={item.image.alt}
-                    width={dynamicWidth}
-                    height={dynamicHeight}
-                    priority={item.image.priority}
-                  />
+              <div key={item.id} className={styles.cases__list__item}>
+                <Image
+                  className={styles.cases__img}
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  width={item.image.width}
+                  height={item.image.height}
+                  priority={item.image.priority}
+                />
+                <div className={styles.cases__list__container}>
                   <div className={styles.cases__list__item__container}>
                     <p className={styles.cases__list__item__title}>
                       {item.title}
                     </p>
-                    <span className={styles.cases__list__item__chip}>
+                    <Link
+                      target="_blank"
+                      href={item.link}
+                      className={styles.cases__list__item__chip}
+                    >
                       <HiArrowUpRight
                         className={styles.cases__list__item__icon}
                       />
-                    </span>
+                    </Link>
                   </div>
                   <div className={styles.cases__list__item__box}>
                     <p className={styles.cases__list__item__box__text}>
@@ -133,9 +115,9 @@ const Cases = () => {
                     </p>
                   </div>
                 </div>
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+          </Slider>
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@
       "height": "296",
       "priority": true
     },
+    "link": "https://zahbug.com/en/",
     "title": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     "text": "Wind Power for auto field irrigation",
     "subject": "July 2023"
@@ -21,6 +22,7 @@
       "height": "296",
       "priority": true
     },
+    "link": "https://www.bosch-home.com.ua/uk/servis/regionalni-storinki/zhytomir",
     "title": "Zhytomyr city Private Enterprise “Bosch”",
     "text": "Solar Panels for industrial use",
     "subject": "November 2023"
@@ -35,7 +37,7 @@
       "priority": true
     },
     "title": "Rivne city Private Enterprise “Biotech”",
-
+    "link": "https://biotechusa.in.ua/uk/",
     "text": "Thermal modules",
     "subject": "October 2023"
   },
@@ -49,7 +51,7 @@
       "priority": true
     },
     "title": "Kherson city Private Enterprise “HealthyFarm”",
-
+    "link": "https://zahbug.com/en/",
     "text": "Wind power",
     "subject": "September 2021"
   },
@@ -63,7 +65,7 @@
       "priority": true
     },
     "title": "Zaporizhia city Private Enterprise “Biotech”",
-
+    "link": "https://zahbug.com/en/",
     "text": "Mini nuclear stations",
     "subject": "May 2021"
   }

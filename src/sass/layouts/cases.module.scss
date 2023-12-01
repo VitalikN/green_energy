@@ -106,17 +106,46 @@
 .cases__list__item {
   background: #eaedf1;
   height: auto;
+  @include mobileMax {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 342px !important;
+  }
+
+  @include desktop {
+    width: 596px !important;
+  }
 }
 .cases__img {
-  max-width: 100%;
+  @include mobileMax {
+    max-width: 100%;
+  }
+  @include tablet {
+    width: 100%;
+  }
   height: auto;
 }
+
+.cases__list__container {
+  @include tabletMax {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    @include tablet {
+      height: 154px;
+    }
+  }
+}
+
 .cases__list__item__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 24px 12px;
+  padding: 24px 12px 0;
 
   @include desktop {
     padding: 36px 48px;
