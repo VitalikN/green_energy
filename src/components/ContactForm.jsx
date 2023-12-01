@@ -2,7 +2,7 @@ import React from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 
 import { ButtonLearn } from "./Button";
-import { validationSchema } from "@/validationSchema";
+import { validationSchema } from "@/utils/validationSchema";
 
 import styles from "@/sass/layouts/contactForm.module.scss";
 

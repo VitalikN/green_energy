@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { HiArrowUpRight } from "react-icons/hi2";
 
-import casesList from "../casesList.json";
+import casesList from "../utils/casesList.json";
 
 import { oswald } from "@/utils/fonts";
 import styles from "@/sass/layouts/cases.module.scss";
