@@ -5,9 +5,11 @@ import { GoArrowUpRight } from "react-icons/go";
 
 import { Link as LinkScroll } from "react-scroll";
 import { useMenu } from "./hooks";
+import { useState } from "react";
 
 const Burger = () => {
-  const { menuOpen, toggleMenu, closeMenu } = useMenu();
+  const { menuOpen, toggleMenu, closeMenu, handleMenuClick, activeMenu } =
+    useMenu();
 
   return (
     <>
@@ -28,71 +30,80 @@ const Burger = () => {
 
             <nav className={styles.menu__list}>
               <LinkScroll
-                onClick={closeMenu}
+                onClick={() => handleMenuClick("main")}
                 activeClass={styles.active}
                 to="main"
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={700}
-                className={`${styles.menu__link} ${styles.active}
-                `}
+                className={`${styles.menu__link} ${
+                  activeMenu === "main" ? styles.active : ""
+                }`}
               >
                 Main
                 <GoArrowUpRight className={styles.menu__link__icon} />
               </LinkScroll>
 
               <LinkScroll
-                onClick={closeMenu}
+                onClick={() => handleMenuClick("about")}
                 activeClass={styles.active}
                 to="About"
                 spy={true}
                 smooth={true}
                 offset={-85}
                 duration={700}
-                className={styles.menu__link}
+                className={`${styles.menu__link} ${
+                  activeMenu === "about" ? styles.active : ""
+                }`}
               >
                 About
                 <GoArrowUpRight className={styles.menu__link__icon} />
               </LinkScroll>
 
               <LinkScroll
-                onClick={closeMenu}
+                onClick={() => handleMenuClick("Cases")}
                 activeClass={styles.active}
                 to="Cases"
                 spy={true}
                 smooth={true}
                 offset={-90}
                 duration={1400}
-                className={styles.menu__link}
+                className={`${styles.menu__link} ${
+                  activeMenu === "Cases" ? styles.active : ""
+                }`}
               >
                 Cases
                 <GoArrowUpRight className={styles.menu__link__icon} />
               </LinkScroll>
 
               <LinkScroll
-                onClick={closeMenu}
+                onClick={() => handleMenuClick("FAQ")}
                 activeClass={styles.active}
                 to="FAQ"
                 spy={true}
                 smooth={true}
                 offset={-90}
                 duration={1700}
-                className={styles.menu__link}
+                className={`${styles.menu__link} ${
+                  activeMenu === "FAQ" ? styles.active : ""
+                }`}
               >
                 FAQ
                 <GoArrowUpRight className={styles.menu__link__icon} />
               </LinkScroll>
 
               <LinkScroll
-                onClick={closeMenu}
+                onClick={() => handleMenuClick("Contact")}
                 activeClass={styles.active}
                 to="Contact"
                 spy={true}
                 smooth={true}
                 offset={-85}
                 duration={1700}
-                className={styles.menu__link}
+                className={`${styles.menu__link} ${
+                  activeMenu === "Contact" ? styles.active : ""
+                }`}
               >
                 Contact Us
                 <GoArrowUpRight className={styles.menu__link__icon} />

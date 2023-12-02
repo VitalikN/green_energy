@@ -99,6 +99,12 @@ export const useCasesSlider = () => {
 export const useMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [activeMenu, setActiveMenu] = useState("main");
+
+  const handleMenuClick = (section) => {
+    setActiveMenu(section);
+    closeMenu();
+  };
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("body-no-scroll");
@@ -119,5 +125,5 @@ export const useMenu = () => {
     setMenuOpen(false);
   };
 
-  return { menuOpen, toggleMenu, closeMenu };
+  return { menuOpen, toggleMenu, closeMenu, handleMenuClick, activeMenu };
 };
