@@ -5,7 +5,6 @@ import { GoArrowUpRight } from "react-icons/go";
 
 import { Link as LinkScroll } from "react-scroll";
 import { useMenu } from "./hooks";
-import { useState } from "react";
 
 const Burger = () => {
   const { menuOpen, toggleMenu, closeMenu, handleMenuClick, activeMenu } =
@@ -15,7 +14,7 @@ const Burger = () => {
     <>
       <div className={styles.burger__box}>
         <div className={styles.burger} onClick={toggleMenu}>
-          <button className={styles.burger__button}>
+          <button type="button" className={styles.burger__button}>
             <div className={styles.line}></div>
             <div className={styles.line}></div>
             <div className={styles.line}></div>
@@ -23,10 +22,14 @@ const Burger = () => {
         </div>
         {menuOpen && (
           <div className={styles.menu}>
-            <div className={styles.menu__box__icon} onClick={closeMenu}>
+            <button
+              type="button"
+              className={styles.menu__box__icon}
+              onClick={closeMenu}
+            >
               <IoIosClose className={styles.menu__icon} />
               close
-            </div>
+            </button>
 
             <nav className={styles.menu__list}>
               <LinkScroll

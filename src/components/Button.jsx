@@ -2,7 +2,7 @@ import styles from "@/sass/layouts/button.module.scss";
 import { BsArrowRight } from "react-icons/bs";
 
 export const Button = ({ title }) => (
-  <button className={styles.header__touch}>
+  <button type="button" className={styles.header__touch}>
     {title}
     <svg className={styles.header__touch__chip} width="14px" height="14px">
       <use href="/symbol-defs.svg#icon-arrow"></use>
