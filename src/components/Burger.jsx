@@ -35,8 +35,7 @@ const Burger = () => {
                 smooth={true}
                 offset={-120}
                 duration={700}
-                href="/"
-                className={`${styles.menu__link} 
+                className={`${styles.menu__link} ${styles.active}
                 `}
               >
                 Main
